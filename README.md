@@ -5,6 +5,7 @@
 
  # Example:
 | Input	| Output |
+| -------- | ------- |
 | As Soon As Possible | ASAP |
 | Liquid-crystal display | LCD |
 | Thank George It's Friday! | TGIF |
