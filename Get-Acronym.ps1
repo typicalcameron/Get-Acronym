@@ -7,7 +7,9 @@
     
     # \s regex matches a whitespace character.
     # .ToUpper() captilizes all the words
-    $split = ($message -split "\s").ToUpper()
+    # -replace [^A-Za-z0-9] removes all special characters.
+    # -replace [0-9] removes all numbers.
+    $split = ($message -split "\s" -replace "[^A-Za-z0-9]" -replace "[0-9]").ToUpper()
     
     # Final output array.
     $output = @()
@@ -21,3 +23,5 @@
     # Each item in the array is joined together in a single string.
     $output -join ""
 }
+
+Get-Acronym "sup big 3asdf"
